@@ -1,0 +1,41 @@
+name: Lightning Code Analysis
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '**.ts'
+      - '**.tsx'
+      - '**.js'
+      - '**.jsx'
+
+jobs:
+  lightning:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      statuses: write
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install --quiet
+
+      - name: Build Lightning
+        run: npm run build --quiet
+
+      - name: Run Lightning Analysis
+        run: npx lightning github-actions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

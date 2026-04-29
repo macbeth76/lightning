@@ -1,0 +1,64 @@
+{
+  "name": "lightning",
+  "version": "1.0.0",
+  "description": "Lightning CLI - Advanced static analysis and code quality tool powered by small language models",
+  "main": "dist/cli.js",
+  "scripts": {
+    "build": "pnpm exec tsc",
+    "lint": "pnpm exec eslint src --ext .ts",
+    "analyze": "pnpm exec node dist/cli.js",
+    "test": "pnpm exec jest",
+    "test:agents": "pnpm exec node dist/testing/agent-test-framework.js",
+    "dev": "pnpm exec tsc --watch",
+    "prepublishOnly": "pnpm run build",
+    "benchmark": "pnpm run build && node dist/testing/benchmark-cli.js"
+  },
+  "keywords": [
+    "lightning",
+    "code-analysis",
+    "static-analysis",
+    "small-language-models",
+    "code-quality",
+    "cli"
+  ],
+  "author": "PowerSecure",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PowerSecure/lightning.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PowerSecure/lightning/issues"
+  },
+  "homepage": "https://github.com/PowerSecure/lightning#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "bin": {
+    "lightning": "./dist/cli.js"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "packageManager": "pnpm@10.33.0",
+  "pnpm": {
+    "overrides": {},
+    "strict": true
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.6.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.0",
+    "@typescript-eslint/types": "^8.59.0",
+    "eslint": "^10.2.1",
+    "jest": "^30.3.0",
+    "ts-jest": "^29.4.9"
+  },
+  "dependencies": {
+    "axios": "^1.15.2",
+    "typescript": "^6.0.3"
+  }
+}

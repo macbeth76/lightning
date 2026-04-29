@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-04-23T13:10:39.543Z",
+  "summary": {
+    "totalFiles": 2,
+    "totalLines": 126,
+    "totalViolations": 15,
+    "totalAnalysisTime": 165,
+    "averageTimePerFile": 82.5,
+    "violationsPerLine": 0.11904761904761904
+  },
+  "severity": {
+    "error": 0,
+    "warning": 11,
+    "info": 4
+  },
+  "ruleBreakdown": {
+    "unused-imports": 1,
+    "null-safety": 10,
+    "magic-strings": 2,
+    "todos": 2
+  },
+  "scenarios": [
+    {
+      "scenario": "TypeScript with Violations",
+      "file": "scenario-2-typescript-utils.ts",
+      "lines": 56,
+      "violations": 10,
+      "time": 102,
+      "rules": {
+        "unused-imports": 1,
+        "null-safety": 5,
+        "magic-strings": 2,
+        "todos": 2
+      },
+      "status": "✅ PASSED"
+    },
+    {
+      "scenario": "Clean Code",
+      "file": "scenario-3-clean-code.ts",
+      "lines": 70,
+      "violations": 5,
+      "time": 63,
+      "status": "✅ PASSED"
+    }
+  ]
+}

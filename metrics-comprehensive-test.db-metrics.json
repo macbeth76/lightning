@@ -1,0 +1,20 @@
+[
+  {
+    "projectId": "comprehensive-test",
+    "timestamp": "2026-04-23T13:10:39.464Z",
+    "totalViolations": 10,
+    "errorCount": 0,
+    "warningCount": 6,
+    "infoCount": 4,
+    "avgSeverity": 0.38000000000000006
+  },
+  {
+    "projectId": "comprehensive-test",
+    "timestamp": "2026-04-23T13:10:39.528Z",
+    "totalViolations": 5,
+    "errorCount": 0,
+    "warningCount": 5,
+    "infoCount": 0,
+    "avgSeverity": 0.5
+  }
+]

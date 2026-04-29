@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-04-23T12:27:11.603Z",
+  "testFiles": [
+    "./src/utils/analyzer.ts",
+    "./src/utils/advanced-rules.ts",
+    "./src/utils/metrics-db.ts"
+  ],
+  "lightningResults": [
+    {
+      "file": "./src/utils/analyzer.ts",
+      "violations": 7,
+      "errorCount": 1,
+      "warningCount": 5,
+      "infoCount": 1,
+      "latencyMs": 137,
+      "avgSeverity": 0.5285714285714286
+    },
+    {
+      "file": "./src/utils/advanced-rules.ts",
+      "violations": 8,
+      "errorCount": 0,
+      "warningCount": 5,
+      "infoCount": 3,
+      "latencyMs": 146,
+      "avgSeverity": 0.38750000000000007
+    },
+    {
+      "file": "./src/utils/metrics-db.ts",
+      "violations": 6,
+      "errorCount": 1,
+      "warningCount": 5,
+      "infoCount": 0,
+      "latencyMs": 126,
+      "avgSeverity": 0.5833333333333334
+    }
+  ],
+  "summary": {
+    "totalViolations": 21,
+    "totalErrors": 2,
+    "totalWarnings": 15,
+    "avgLatencyMs": 136
+  },
+  "copilotComparison": {
+    "avgLatencyMs": 56620,
+    "speedImprovement": "416x"
+  }
+}

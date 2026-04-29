@@ -1,0 +1,62 @@
+{
+  "suiteId": "ab-test-v1",
+  "description": "A/B Testing: Compare SLM models for code analysis",
+  "testCases": [
+    {
+      "id": "test-001",
+      "name": "Refactor Payment Processing",
+      "category": "refactoring",
+      "code": "export function processPayment(userId: string, amount: number, cardToken: string, cvv: string, expiryDate: string, customerEmail: string, customerName: string, billingAddress: string, shippingAddress: string, metadata: Record<string, string>): Promise<PaymentResult> { validateAmount(amount); validateToken(cardToken); validateCVV(cvv); validateExpiry(expiryDate); const encryptedCard = encryptCardData(cardToken, cvv, expiryDate); const gateway = new PaymentGateway(process.env.GATEWAY_KEY!); const chargeId = gateway.charge(encryptedCard, amount, metadata); const receipt = generateReceipt(chargeId, userId, amount, customerEmail, customerName); sendEmail(customerEmail, receipt); logTransaction(userId, chargeId, amount, 'success'); return { chargeId, receipt, status: 'success' }; }",
+      "description": "Payment processing violates SRP - too many responsibilities",
+      "expectedTask": "Break into separate functions under 24 lines each",
+      "groundTruth": "Split into: validatePaymentData(), encryptPaymentInfo(), chargeCard(), sendReceipt(), logTransaction()"
+    },
+    {
+      "id": "test-002",
+      "name": "Fix Auth Race Condition",
+      "category": "bugfix",
+      "code": "async function authenticateUser(email: string, password: string): Promise<User | null> { const user = await db.users.findOne({ email }); if (!user) return null; const isValid = await bcrypt.compare(password, user.passwordHash); if (!isValid) { await db.failedAttempts.create({ email, timestamp: new Date() }); return null; } user.lastLogin = new Date(); await db.users.update(user); const session = await db.sessions.create({ userId: user.id, token: crypto.randomUUID() }); return user; }",
+      "description": "Race condition: session may be created twice if concurrent requests arrive",
+      "expectedTask": "Fix race condition using database transaction",
+      "groundTruth": "Use database transaction for atomicity. Wrap user update and session creation in transaction."
+    },
+    {
+      "id": "test-003",
+      "name": "Optimize Database Query",
+      "category": "optimization",
+      "code": "function getAllUsersWithPosts(): User[] { const users = db.users.find({}); const result = []; for (const user of users) { const posts = db.posts.find({ userId: user.id }); const comments = db.comments.find({ userId: user.id }); user.posts = posts; user.comments = comments; result.push(user); } return result; }",
+      "description": "N+1 query problem: inefficient database access pattern",
+      "expectedTask": "Optimize using JOIN or batch queries",
+      "groundTruth": "Use JOIN query or batch load posts/comments in one query with IN clause"
+    },
+    {
+      "id": "test-004",
+      "name": "Handle Null Safely",
+      "category": "bugfix",
+      "code": "function parseUserData(json: string): User { const data = JSON.parse(json); return { id: data.id, name: data.name, email: data.email, phone: data.contact.phone, address: data.contact.address, city: data.contact.address.city }; }",
+      "description": "Missing null checks - can crash if data structure incomplete",
+      "expectedTask": "Add defensive null checks and use optional chaining",
+      "groundTruth": "Use optional chaining (?.) and nullish coalescing (??) or add explicit null checks"
+    },
+    {
+      "id": "test-005",
+      "name": "Refactor Complex Function",
+      "category": "refactoring",
+      "code": "function generateReport(data: any[]): string { let html = '<table>'; for (let i = 0; i < data.length; i++) { const row = data[i]; let status = 'unknown'; if (row.value > 1000) { if (row.type === 'A') status = 'high'; else if (row.type === 'B') status = 'medium'; } else if (row.value > 500) status = 'medium'; else status = 'low'; html += `<tr><td>${row.id}</td><td>${row.name}</td><td>${status}</td></tr>`; } html += '</table>'; return html; }",
+      "description": "Complex nested conditionals and mixed concerns",
+      "expectedTask": "Extract status logic and HTML generation into separate functions",
+      "groundTruth": "Create calculateStatus() function, use template or builder for HTML generation"
+    },
+    {
+      "id": "test-006",
+      "name": "Add Error Handling",
+      "category": "feature",
+      "code": "function fetchAndParseJSON(url: string) { const response = fetch(url); const json = response.json(); const result = processData(json); saveToDatabase(result); return result; }",
+      "description": "No error handling - network, parsing, or DB errors will crash",
+      "expectedTask": "Add try-catch with proper error handling and logging",
+      "groundTruth": "Wrap fetch, JSON.parse, processData, and saveToDatabase in try-catch. Log and throw meaningful errors."
+    }
+  ],
+  "models": ["llama-1b", "phi-3.5", "mistral-7b", "copilot", "lightning"],
+  "metrics": ["accuracy", "latency", "tokenEfficiency", "codeQuality", "contextUtilization"]
+}

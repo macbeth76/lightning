@@ -1,0 +1,9 @@
+{
+  "name": "lambda-crud-service",
+  "version": "1.0.0",
+  "description": "AWS Lambda CRUD service with DynamoDB",
+  "dependencies": {
+    "aws-sdk": "^2.1000.0",
+    "uuid": "^9.0.0"
+  }
+}

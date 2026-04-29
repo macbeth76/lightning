@@ -1,0 +1,67 @@
+/**
+ * Scenario: Clean Build.gradle with No Violations
+ * All tasks follow best practices
+ */
+
+plugins {
+    id 'java'
+    id 'application'
+}
+
+// Task 1: Clean - OK (6 lines)
+task clean {
+    println 'Removing build artifacts...'
+}
+
+// Task 2: Compile - OK (5 lines)
+task compile {
+    dependsOn 'clean'
+    println 'Compiling Java classes...'
+}
+
+// Task 3: Test - OK (6 lines)
+task test {
+    dependsOn 'compile'
+    println 'Running unit tests...'
+}
+
+// Task 4: Build - OK (5 lines)
+task build {
+    dependsOn ['compile', 'test']
+    println 'Building final package...'
+}
+
+// Task 5: Package - OK (4 lines)
+task pkg {
+    dependsOn 'build'
+    println 'Creating distribution package...'
+}
+
+// Task 6: Deploy - OK (4 lines)
+task deploy {
+    dependsOn 'pkg'
+    println 'Deploying to production...'
+}
+
+// Task 7: Lint - OK (5 lines)
+task lint {
+    println 'Checking code style...'
+    println 'Validation passed'
+}
+
+// Task 8: Coverage - OK (6 lines)
+task coverage {
+    dependsOn 'test'
+    println 'Generating code coverage report...'
+}
+
+// Task 9: Docs - OK (5 lines)
+task doc {
+    println 'Building documentation...'
+}
+
+// Task 10: Release - OK (6 lines)
+task release {
+    dependsOn ['build', 'test', 'pkg']
+    println 'Creating release build...'
+}

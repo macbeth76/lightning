@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-04-23T12:04:24.888Z",
+  "testCount": 3,
+  "results": [
+    {
+      "testId": "test-001",
+      "name": "Refactor Payment Processing",
+      "model": "lightning",
+      "latencyMs": 2214,
+      "success": true,
+      "hasViolations": true
+    },
+    {
+      "testId": "test-002",
+      "name": "Fix Auth Race Condition",
+      "model": "lightning",
+      "latencyMs": 1041,
+      "success": true,
+      "hasViolations": true
+    },
+    {
+      "testId": "test-003",
+      "name": "Optimize Database Query",
+      "model": "lightning",
+      "latencyMs": 1042,
+      "success": true,
+      "hasViolations": true
+    },
+    {
+      "testId": "test-001",
+      "name": "Refactor Payment Processing",
+      "model": "copilot",
+      "latencyMs": 66149,
+      "success": true,
+      "responseLength": 1803,
+      "responsePreview": "I'll review this code for issues:\n\n## Code Review Issues\n\n### 1. **Violates Single Responsibility Principle** ⚠️\nThe function has 6 distinct responsib"
+    },
+    {
+      "testId": "test-002",
+      "name": "Fix Auth Race Condition",
+      "model": "copilot",
+      "latencyMs": 53658,
+      "success": true,
+      "responseLength": 1998,
+      "responsePreview": "I'll review this code for the race condition and other potential issues.\n\n## Issues Identified\n\n**1. Race Condition (Primary Issue)** ⚠️\nThe check-the"
+    },
+    {
+      "testId": "test-003",
+      "name": "Optimize Database Query",
+      "model": "copilot",
+      "latencyMs": 50053,
+      "success": true,
+      "responseLength": 2270,
+      "responsePreview": "I'll review this code for you and identify the issues, including the N+1 query problem.\n\n## Code Review: Issues Found\n\n### **1. N+1 Query Problem (Cri"
+    }
+  ],
+  "summary": {
+    "lightningSuccess": 3,
+    "copilotSuccess": 3,
+    "lightningAvgLatency": "1432",
+    "copilotAvgLatency": "56620"
+  }
+}

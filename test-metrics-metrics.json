@@ -1,0 +1,10 @@
+[
+  {
+    "projectId": "test-project",
+    "timestamp": "2026-04-23T12:26:54.623Z",
+    "totalViolations": 5,
+    "errorCount": 1,
+    "warningCount": 3,
+    "infoCount": 1
+  }
+]

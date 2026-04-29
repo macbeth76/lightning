@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-04-23T12:11:24.762Z",
+  "tempDir": "/tmp/ab-test-3KL0t0",
+  "results": [
+    {
+      "model": "copilot",
+      "test": "project-generation",
+      "latencyMs": 119999,
+      "success": false,
+      "error": "spawnSync /bin/sh ETIMEDOUT"
+    },
+    {
+      "model": "lightning",
+      "test": "project-generation",
+      "latencyMs": 79035,
+      "responseSize": 3849,
+      "hasGradleFile": true,
+      "hasController": true,
+      "hasGradle": true,
+      "success": true
+    }
+  ],
+  "files": {
+    "copilotResponse": "/tmp/ab-test-3KL0t0/copilot-response.txt",
+    "lightningResponse": "/tmp/ab-test-3KL0t0/lightning-response.txt"
+  }
+}

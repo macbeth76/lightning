@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-04-23T11:39:59.116Z",
+  "source": "REAL Copilot CLI (gh copilot -p)",
+  "latencyMs": 49508,
+  "responseLength": 424,
+  "tokenCount": 71,
+  "success": true,
+  "fullResponse": "I'd be happy to help refactor a function following the Single Responsibility Principle! However, I don't see the function code in your message. \n\nCould you please provide:\n1. **The function code** you'd like me to refactor\n2. **The file path** (optional, but helpful for context)\n3. **Any specific concerns** about the current implementation\n\nYou can paste the code directly, or let me know the file path and I'll read it.\n\n"
+}

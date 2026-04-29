@@ -1,0 +1,212 @@
+[
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/analyzer.ts",
+    "violationType": "method-length",
+    "severity": "error",
+    "lineNumber": 29,
+    "message": "Method 'while' is 42 lines, exceeds max of 24",
+    "rule": "max-method-length",
+    "timestamp": "2026-04-23T12:27:11.230Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/analyzer.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 19,
+    "message": "Potential null reference: fs.readFileSync - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T12:27:11.241Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/analyzer.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 29,
+    "message": "Potential null reference: functionPattern.exec - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T12:27:11.251Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/analyzer.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 30,
+    "message": "Potential null reference: match.index - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T12:27:11.261Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/analyzer.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 31,
+    "message": "Potential null reference: content.substring - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T12:27:11.269Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/analyzer.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 38,
+    "message": "Potential null reference: content.length - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T12:27:11.283Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/analyzer.ts",
+    "violationType": "todo",
+    "severity": "info",
+    "lineNumber": 64,
+    "message": "TODO: calculate cyclomatic complexity",
+    "rule": "todos",
+    "timestamp": "2026-04-23T12:27:11.299Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/advanced-rules.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 16,
+    "message": "Potential null reference: fs.readFileSync - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T12:27:11.382Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/advanced-rules.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 17,
+    "message": "Potential null reference: content.split - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T12:27:11.393Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/advanced-rules.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 23,
+    "message": "Potential null reference: lines.forEach - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T12:27:11.403Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/advanced-rules.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 24,
+    "message": "Potential null reference: line.match - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T12:27:11.415Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/advanced-rules.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 26,
+    "message": "Potential null reference: n.trim - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T12:27:11.427Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/advanced-rules.ts",
+    "violationType": "magic-string",
+    "severity": "info",
+    "lineNumber": 48,
+    "message": "Magic string \"warning\" appears 3 times - consider extracting to constant",
+    "rule": "magic-strings",
+    "timestamp": "2026-04-23T12:27:11.436Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/advanced-rules.ts",
+    "violationType": "magic-string",
+    "severity": "info",
+    "lineNumber": 84,
+    "message": "Magic string \"null-safety\" appears 2 times - consider extracting to constant",
+    "rule": "magic-strings",
+    "timestamp": "2026-04-23T12:27:11.447Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/advanced-rules.ts",
+    "violationType": "magic-string",
+    "severity": "info",
+    "lineNumber": 169,
+    "message": "Magic string \"error-handling\" appears 2 times - consider extracting to constant",
+    "rule": "magic-strings",
+    "timestamp": "2026-04-23T12:27:11.456Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/metrics-db.ts",
+    "violationType": "method-length",
+    "severity": "error",
+    "lineNumber": 55,
+    "message": "Method 'recordViolation' is 27 lines, exceeds max of 24",
+    "rule": "max-method-length",
+    "timestamp": "2026-04-23T12:27:11.517Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/metrics-db.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 35,
+    "message": "Potential null reference: this.metricsFile - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T12:27:11.529Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/metrics-db.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 35,
+    "message": "Potential null reference: metrics.json - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T12:27:11.540Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/metrics-db.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 36,
+    "message": "Potential null reference: this.violationsFile - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T12:27:11.555Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/metrics-db.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 36,
+    "message": "Potential null reference: violations.json - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T12:27:11.569Z"
+  },
+  {
+    "projectId": "lightning-final-test",
+    "filePath": "./src/utils/metrics-db.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 37,
+    "message": "Potential null reference: this.initializeFiles - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T12:27:11.582Z"
+  }
+]

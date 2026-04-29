@@ -1,0 +1,92 @@
+[
+  {
+    "testName": "lambda_crud",
+    "agentType": "graph",
+    "accuracy": 0.8,
+    "hallucinating": false,
+    "falsePositives": "",
+    "timestamp": "2026-04-23T18:41:34.788Z",
+    "runId": "2026-04-23T18:41:32.724Z",
+    "id": 1
+  },
+  {
+    "testName": "lambda_crud",
+    "agentType": "ollama",
+    "accuracy": 0.6,
+    "hallucinating": false,
+    "falsePositives": "",
+    "timestamp": "2026-04-23T18:41:34.788Z",
+    "runId": "2026-04-23T18:41:32.724Z",
+    "id": 2
+  },
+  {
+    "testName": "lambda_crud",
+    "agentType": "template",
+    "accuracy": 0.4,
+    "hallucinating": false,
+    "falsePositives": "",
+    "timestamp": "2026-04-23T18:41:34.788Z",
+    "runId": "2026-04-23T18:41:32.724Z",
+    "id": 3
+  },
+  {
+    "testName": "express_api",
+    "agentType": "graph",
+    "accuracy": 0.8,
+    "hallucinating": false,
+    "falsePositives": "",
+    "timestamp": "2026-04-23T18:41:36.511Z",
+    "runId": "2026-04-23T18:41:32.724Z",
+    "id": 4
+  },
+  {
+    "testName": "express_api",
+    "agentType": "ollama",
+    "accuracy": 0.8,
+    "hallucinating": false,
+    "falsePositives": "",
+    "timestamp": "2026-04-23T18:41:36.511Z",
+    "runId": "2026-04-23T18:41:32.724Z",
+    "id": 5
+  },
+  {
+    "testName": "express_api",
+    "agentType": "template",
+    "accuracy": 0.8,
+    "hallucinating": false,
+    "falsePositives": "",
+    "timestamp": "2026-04-23T18:41:36.511Z",
+    "runId": "2026-04-23T18:41:32.724Z",
+    "id": 6
+  },
+  {
+    "testName": "microservice",
+    "agentType": "graph",
+    "accuracy": 0.75,
+    "hallucinating": false,
+    "falsePositives": "",
+    "timestamp": "2026-04-23T18:41:38.105Z",
+    "runId": "2026-04-23T18:41:32.724Z",
+    "id": 7
+  },
+  {
+    "testName": "microservice",
+    "agentType": "ollama",
+    "accuracy": 0.75,
+    "hallucinating": false,
+    "falsePositives": "",
+    "timestamp": "2026-04-23T18:41:38.105Z",
+    "runId": "2026-04-23T18:41:32.724Z",
+    "id": 8
+  },
+  {
+    "testName": "microservice",
+    "agentType": "template",
+    "accuracy": 1,
+    "hallucinating": false,
+    "falsePositives": "",
+    "timestamp": "2026-04-23T18:41:38.105Z",
+    "runId": "2026-04-23T18:41:32.724Z",
+    "id": 9
+  }
+]

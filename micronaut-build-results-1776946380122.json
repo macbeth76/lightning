@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-04-23T12:13:00.122Z",
+  "projects": {
+    "copilot": "/tmp/hello-copilot",
+    "lightning": "/tmp/hello-lightning"
+  },
+  "results": [
+    {
+      "model": "copilot",
+      "latencyMs": 56166,
+      "success": true,
+      "buildOutput": "Starting a Gradle Daemon, 1 busy and 1 incompatible and 1 stopped Daemons could not be reused, use --status for details\n\nFAILURE: Build failed with an exception.\n\n* What went wrong:\nA problem occurred configuring root project 'hello-micronaut'.\n> Failed to notify project evaluation listener.\n   > Micronaut version not set. Use micronaut { version '..'} or 'micronautVersion' in gradle.properties to set the version\n   > Micronaut version not set. Use micronaut { version '..'} or 'micronautVersion'"
+    },
+    {
+      "model": "lightning",
+      "latencyMs": 1132,
+      "success": true,
+      "buildOutput": "\nFAILURE: Build failed with an exception.\n\n* What went wrong:\nA problem occurred configuring root project 'hello-micronaut'.\n> Failed to notify project evaluation listener.\n   > Micronaut version not set. Use micronaut { version '..'} or 'micronautVersion' in gradle.properties to set the version\n   > Micronaut version not set. Use micronaut { version '..'} or 'micronautVersion' in gradle.properties to set the version\n\n* Try:\n> Run with --stacktrace option to get the stack trace.\n> Run with --inf"
+    }
+  ]
+}

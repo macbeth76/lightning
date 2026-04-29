@@ -1,0 +1,106 @@
+/**
+ * Scenario: Build.gradle with Multiple Violations
+ * Tests the 24-line rule and dependency analysis
+ */
+
+plugins {
+    id 'java'
+    id 'application'
+}
+
+// Task 1: VIOLATION - Exceeds 24 lines (35 lines total)
+task compileWithViolations {
+    println '=== Compiling Project ==='
+    
+    // Step 1: Validate source files
+    println 'Validating source files...'
+    def sourceFiles = fileTree('src/main/java')
+    println "Found ${sourceFiles.size()} source files"
+    
+    // Step 2: Check dependencies
+    println 'Checking dependencies...'
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            println "Processing dependency: ${details.requested.name}"
+        }
+    }
+    
+    // Step 3: Configure compiler
+    println 'Configuring compiler...'
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+        options.compilerArgs.add('-parameters')
+    }
+    
+    // Step 4: Run compilation
+    println 'Running compilation...'
+    println 'Compilation complete!'
+}
+
+// Task 2: VIOLATION - Circular dependency (A -> B -> A)
+task taskA {
+    dependsOn 'taskB'
+    println 'Task A'
+}
+
+task taskB {
+    dependsOn 'taskA'  // CYCLE!
+    println 'Task B'
+}
+
+// Task 3: VIOLATION - Too many dependencies (6 > 5)
+task complexBuild {
+    dependsOn ['compile', 'lint', 'unitTest', 'integrationTest', 'documentation', 'packageApp']
+    println 'Building complex project'
+}
+
+// Task 4: OK - Normal task
+task build {
+    dependsOn 'compile'
+    println 'Building application'
+}
+
+// Task 5: OK - Has dependencies but reasonable
+task test {
+    dependsOn ['compile', 'lint']
+    println 'Running tests'
+}
+
+// Task 6: VIOLATION - Orphaned task (never called)
+task unused {
+    println 'This task is never invoked!'
+}
+
+// Task 7: OK - Properly used
+task compile {
+    println 'Compiling Java classes'
+}
+
+// Task 8: OK - Properly used
+task lint {
+    println 'Linting code'
+}
+
+// Task 9: VIOLATION - Exceeds 24 lines (documentation task is 26 lines)
+task documentation {
+    println '=== Generating Documentation ==='
+    println 'Creating API documentation...'
+    println 'Generating JavaDoc comments...'
+    println 'Building architecture diagrams...'
+    println 'Writing deployment guide...'
+    println 'Creating user manual...'
+    println 'Writing API reference...'
+    println 'Generating quickstart guide...'
+    println 'Creating troubleshooting section...'
+    println 'Building FAQ section...'
+    println 'Creating glossary...'
+    println 'Writing performance tuning guide...'
+    println 'Creating migration guide...'
+    println 'Documentation generation complete!'
+}
+
+// Task 10: OK - Reasonable complexity
+task packageApp {
+    dependsOn ['test', 'build']
+    println 'Packaging application'
+}

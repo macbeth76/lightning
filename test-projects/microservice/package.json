@@ -1,0 +1,10 @@
+{
+  "name": "grpc-microservice",
+  "version": "1.0.0",
+  "description": "gRPC microservice with Kubernetes deployment",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.9.0",
+    "@grpc/proto-loader": "^0.7.0",
+    "protobufjs": "^7.0.0"
+  }
+}

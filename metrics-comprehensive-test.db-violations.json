@@ -1,0 +1,152 @@
+[
+  {
+    "projectId": "comprehensive-test",
+    "filePath": "/tmp/lightning-test-projects/scenario-2-typescript-utils.ts",
+    "violationType": "unused-import",
+    "severity": "warning",
+    "lineNumber": 3,
+    "message": "Unused import: readFile",
+    "rule": "unused-imports",
+    "timestamp": "2026-04-23T13:10:39.380Z"
+  },
+  {
+    "projectId": "comprehensive-test",
+    "filePath": "/tmp/lightning-test-projects/scenario-2-typescript-utils.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 12,
+    "message": "Potential null reference: user.profile - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T13:10:39.389Z"
+  },
+  {
+    "projectId": "comprehensive-test",
+    "filePath": "/tmp/lightning-test-projects/scenario-2-typescript-utils.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 12,
+    "message": "Potential null reference: user.profile - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T13:10:39.397Z"
+  },
+  {
+    "projectId": "comprehensive-test",
+    "filePath": "/tmp/lightning-test-projects/scenario-2-typescript-utils.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 15,
+    "message": "Potential null reference: JSON.parse - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T13:10:39.406Z"
+  },
+  {
+    "projectId": "comprehensive-test",
+    "filePath": "/tmp/lightning-test-projects/scenario-2-typescript-utils.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 15,
+    "message": "Potential null reference: user.data - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T13:10:39.414Z"
+  },
+  {
+    "projectId": "comprehensive-test",
+    "filePath": "/tmp/lightning-test-projects/scenario-2-typescript-utils.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 24,
+    "message": "Potential null reference: console.log - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T13:10:39.422Z"
+  },
+  {
+    "projectId": "comprehensive-test",
+    "filePath": "/tmp/lightning-test-projects/scenario-2-typescript-utils.ts",
+    "violationType": "magic-string",
+    "severity": "info",
+    "lineNumber": 5,
+    "message": "Magic string \"API_KEY\" appears 5 times - consider extracting to constant",
+    "rule": "magic-strings",
+    "timestamp": "2026-04-23T13:10:39.431Z"
+  },
+  {
+    "projectId": "comprehensive-test",
+    "filePath": "/tmp/lightning-test-projects/scenario-2-typescript-utils.ts",
+    "violationType": "magic-string",
+    "severity": "info",
+    "lineNumber": 37,
+    "message": "Magic string \"status\" appears 2 times - consider extracting to constant",
+    "rule": "magic-strings",
+    "timestamp": "2026-04-23T13:10:39.439Z"
+  },
+  {
+    "projectId": "comprehensive-test",
+    "filePath": "/tmp/lightning-test-projects/scenario-2-typescript-utils.ts",
+    "violationType": "todo",
+    "severity": "info",
+    "lineNumber": 17,
+    "message": "TODO: Implement proper validation  // Violation 7: TODO comment",
+    "rule": "todos",
+    "timestamp": "2026-04-23T13:10:39.448Z"
+  },
+  {
+    "projectId": "comprehensive-test",
+    "filePath": "/tmp/lightning-test-projects/scenario-2-typescript-utils.ts",
+    "violationType": "todo",
+    "severity": "info",
+    "lineNumber": 45,
+    "message": "TODO: Add caching layer  // Violation 12: Another TODO",
+    "rule": "todos",
+    "timestamp": "2026-04-23T13:10:39.457Z"
+  },
+  {
+    "projectId": "comprehensive-test",
+    "filePath": "/tmp/lightning-test-projects/scenario-3-clean-code.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 23,
+    "message": "Potential null reference: this.users - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T13:10:39.482Z"
+  },
+  {
+    "projectId": "comprehensive-test",
+    "filePath": "/tmp/lightning-test-projects/scenario-3-clean-code.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 28,
+    "message": "Potential null reference: this.users - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T13:10:39.492Z"
+  },
+  {
+    "projectId": "comprehensive-test",
+    "filePath": "/tmp/lightning-test-projects/scenario-3-clean-code.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 36,
+    "message": "Potential null reference: this.users - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T13:10:39.503Z"
+  },
+  {
+    "projectId": "comprehensive-test",
+    "filePath": "/tmp/lightning-test-projects/scenario-3-clean-code.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 36,
+    "message": "Potential null reference: u.id - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T13:10:39.513Z"
+  },
+  {
+    "projectId": "comprehensive-test",
+    "filePath": "/tmp/lightning-test-projects/scenario-3-clean-code.ts",
+    "violationType": "null-safety",
+    "severity": "warning",
+    "lineNumber": 46,
+    "message": "Potential null reference: this.findById - consider using optional chaining ?.",
+    "rule": "null-safety",
+    "timestamp": "2026-04-23T13:10:39.522Z"
+  }
+]

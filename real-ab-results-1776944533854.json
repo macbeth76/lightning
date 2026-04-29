@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-04-23T11:42:13.854Z",
+  "testCount": 2,
+  "successCount": 1,
+  "results": [
+    {
+      "testCase": "test-001",
+      "model": "copilot",
+      "latencyMs": 57524,
+      "responseLength": 3242,
+      "tokenCount": 375,
+      "success": true,
+      "sample": "I'll refactor this payment function to follow Single Responsibility Principle, breaking each concern into focused, single-purpose functions/classes.\n\nHere's the refactored code following SRP principle"
+    },
+    {
+      "testCase": "test-002",
+      "model": "copilot",
+      "latencyMs": 59994,
+      "success": false,
+      "error": "spawnSync /bin/sh ETIMEDOUT"
+    }
+  ]
+}

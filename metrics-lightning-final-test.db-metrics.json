@@ -1,0 +1,29 @@
+[
+  {
+    "projectId": "lightning-final-test",
+    "timestamp": "2026-04-23T12:27:11.309Z",
+    "totalViolations": 7,
+    "errorCount": 1,
+    "warningCount": 5,
+    "infoCount": 1,
+    "avgSeverity": 0.5285714285714286
+  },
+  {
+    "projectId": "lightning-final-test",
+    "timestamp": "2026-04-23T12:27:11.461Z",
+    "totalViolations": 8,
+    "errorCount": 0,
+    "warningCount": 5,
+    "infoCount": 3,
+    "avgSeverity": 0.38750000000000007
+  },
+  {
+    "projectId": "lightning-final-test",
+    "timestamp": "2026-04-23T12:27:11.589Z",
+    "totalViolations": 6,
+    "errorCount": 1,
+    "warningCount": 5,
+    "infoCount": 0,
+    "avgSeverity": 0.5833333333333334
+  }
+]
