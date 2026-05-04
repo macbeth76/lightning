@@ -6,10 +6,11 @@
 
 import axios from 'axios';
 import { ProjectGraphAnalyzer } from '../utils/project-graph-analyzer';
+import { LIGHTNING_MODEL, OLLAMA_HOST } from '../agent/config';
 
 export class OllamaAgent {
-  private readonly model = 'phi3:mini';
-  private readonly baseUrl = 'http://host.docker.internal:11434';
+  private readonly model = LIGHTNING_MODEL;
+  private readonly baseUrl = OLLAMA_HOST;
 
   /**
    * Analyze a project using graph theory + Ollama (≤24 lines)

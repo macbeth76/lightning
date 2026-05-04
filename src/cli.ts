@@ -10,6 +10,7 @@ import { LightningChatEngine } from './utils/chat-engine';
 import { GitHubActionsHandler } from './integrations/github-actions';
 import { StaticAnalysisError, FileOperationError } from './types/errors';
 import { CrudEngine, FileType } from './utils/crud-engine';
+import { LightningAgent } from './agent';
 
 async function main(): Promise<void> {
   try {
@@ -277,6 +278,29 @@ For more info: https://github.com/user/lightning
         }
       }
 
+      process.exit(0);
+    }
+
+    // Handle agent commands: fix, spec, explain, review, ask
+    if (['fix', 'spec', 'explain', 'review', 'ask'].includes(args[0])) {
+      const cmd = args[0];
+      const input = args.slice(1).join(' ');
+      if (!input) {
+        console.error(`Usage: lightning ${cmd} <description or file>`);
+        process.exit(1);
+      }
+      const agent = new LightningAgent({ cwd: process.cwd() });
+      try {
+        let result: string;
+        if (cmd === 'fix')     result = await agent.fix(input);
+        else if (cmd === 'spec')    result = await agent.spec(input);
+        else if (cmd === 'explain') result = await agent.explain(input);
+        else if (cmd === 'review')  result = await agent.review(input);
+        else                        result = await agent.ask(input);
+        console.log(result);
+      } finally {
+        agent.close();
+      }
       process.exit(0);
     }
 

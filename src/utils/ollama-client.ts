@@ -21,7 +21,7 @@ export interface OllamaResponse {
 
 export class OllamaClient {
   private host: string = 'http://localhost:11434';
-  private model: string = 'mistral'; // or llama2, neural-chat, etc.
+  private model: string = process.env.LIGHTNING_MODEL ?? 'qwen2.5-coder:3b';
 
   constructor(host?: string, model?: string) {
     if (host) this.host = host;

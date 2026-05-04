@@ -4,3 +4,4 @@ dist/
 *.crt
 *.pem
 *.key
+src/utils/__tests__/docs-test/

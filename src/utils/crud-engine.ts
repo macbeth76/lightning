@@ -10,7 +10,7 @@ import { StaticAnalyzer } from './analyzer';
 import { FileOperationError } from '../types/errors';
 
 const OLLAMA_URL = process.env.OLLAMA_URL ?? 'http://host.docker.internal:11434/api/generate';
-const OLLAMA_MODEL = process.env.OLLAMA_MODEL ?? 'phi3:mini';
+const OLLAMA_MODEL = process.env.LIGHTNING_MODEL ?? process.env.OLLAMA_MODEL ?? 'qwen2.5-coder:3b';
 const MAX_RETRIES = 3;
 const MAX_LINES = 24;
 
