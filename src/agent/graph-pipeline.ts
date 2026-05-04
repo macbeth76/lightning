@@ -8,7 +8,6 @@ import { ProjectGraphAnalyzer } from '../utils/project-graph-analyzer';
 import { OllamaChat } from './ollama-chat';
 import { makeHandlers, makeContext, TOOL_DEFINITIONS } from './tools';
 import { LIGHTNING_MODEL, OLLAMA_HOST, MAX_SEGMENT_LINES } from './config';
-import * as fs from 'fs';
 
 export interface PipelineOptions {
   cwd: string;
@@ -52,9 +51,7 @@ export class GraphPipeline {
     );
 
     return {
-      filesWritten: [...ctx.fileCache.keys()].filter(f =>
-        fs.existsSync(f)
-      ),
+      filesWritten: [...ctx.filesWritten],
       segmentsGenerated: [...ctx.segmentCache.values()]
         .reduce((n, segs) => n + segs.length, 0),
       violations: [],

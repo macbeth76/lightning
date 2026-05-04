@@ -11,7 +11,8 @@
     "test:agents": "pnpm exec node dist/testing/agent-test-framework.js",
     "dev": "pnpm exec tsc --watch",
     "prepublishOnly": "pnpm run build",
-    "benchmark": "pnpm run build && node dist/testing/benchmark-cli.js"
+    "benchmark": "pnpm run build && node dist/testing/benchmark-cli.js",
+    "postinstall": "node -e \"try{require('better-sqlite3')}catch(e){require('child_process').execSync('node-gyp rebuild',{cwd:'node_modules/.pnpm/better-sqlite3@12.9.0/node_modules/better-sqlite3',stdio:'inherit'})}\""
   },
   "keywords": [
     "lightning",
@@ -25,12 +26,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PowerSecure/lightning.git"
+    "url": "https://github.com/macbeth76/lightning.git"
   },
   "bugs": {
-    "url": "https://github.com/PowerSecure/lightning/issues"
+    "url": "https://github.com/macbeth76/lightning/issues"
   },
-  "homepage": "https://github.com/PowerSecure/lightning#readme",
+  "homepage": "https://github.com/macbeth76/lightning#readme",
   "engines": {
     "node": ">=16.0.0"
   },

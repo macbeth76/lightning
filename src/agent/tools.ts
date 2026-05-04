@@ -19,6 +19,7 @@ const execFileAsync = promisify(execFile);
 export interface AgentContext {
   cwd: string;
   fileCache: Map<string, string>;
+  filesWritten: Set<string>;
   segmentCache: Map<string, ReturnType<typeof CodeSegmenter.segmentCode>>;
   graphCache: Map<string, Awaited<ReturnType<ProjectGraphAnalyzer['buildGraph']>>>;
 }
@@ -27,6 +28,7 @@ export function makeContext(cwd: string): AgentContext {
   return {
     cwd,
     fileCache: new Map(),
+    filesWritten: new Set(),
     segmentCache: new Map(),
     graphCache: new Map(),
   };
@@ -53,6 +55,7 @@ async function writeFile(args: Record<string, unknown>, ctx: AgentContext): Prom
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
   fs.writeFileSync(filePath, content, 'utf8');
   ctx.fileCache.set(filePath, content);
+  ctx.filesWritten.add(filePath);
   ctx.segmentCache.delete(filePath);
   return `Written: ${filePath}`;
 }
