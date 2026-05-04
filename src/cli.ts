@@ -282,17 +282,20 @@ For more info: https://github.com/user/lightning
     }
 
     // Handle agent commands: fix, spec, explain, review, ask
+    // Supports --auto-host flag to probe Jetson/localhost automatically
     if (['fix', 'spec', 'explain', 'review', 'ask'].includes(args[0])) {
       const cmd = args[0];
-      const input = args.slice(1).join(' ');
+      const autoHost = args.includes('--auto-host');
+      const filteredArgs = args.slice(1).filter(a => a !== '--auto-host');
+      const input = filteredArgs.join(' ');
       if (!input) {
-        console.error(`Usage: lightning ${cmd} <description or file>`);
+        console.error(`Usage: lightning ${cmd} [--auto-host] <description or file>`);
         process.exit(1);
       }
-      const agent = new LightningAgent({ cwd: process.cwd() });
+      const agent = new LightningAgent({ cwd: process.cwd(), autoHost });
       try {
         let result: string;
-        if (cmd === 'fix')     result = await agent.fix(input);
+        if (cmd === 'fix')          result = await agent.fix(input);
         else if (cmd === 'spec')    result = await agent.spec(input);
         else if (cmd === 'explain') result = await agent.explain(input);
         else if (cmd === 'review')  result = await agent.review(input);
@@ -301,6 +304,17 @@ For more info: https://github.com/user/lightning
       } finally {
         agent.close();
       }
+      process.exit(0);
+    }
+
+    // probe: show which Ollama host is reachable
+    if (args[0] === 'probe') {
+      const { resolveOllamaHost, JETSON_OLLAMA_HOST, OLLAMA_HOST: defaultHost } = await import('./agent/config');
+      console.log(`Probing Ollama hosts...`);
+      console.log(`  default:  ${defaultHost}`);
+      console.log(`  jetson:   ${JETSON_OLLAMA_HOST}`);
+      const best = await resolveOllamaHost(true);
+      console.log(`  → using:  ${best}`);
       process.exit(0);
     }
 

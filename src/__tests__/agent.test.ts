@@ -14,7 +14,7 @@ import * as os from 'os';
 
 describe('config', () => {
   it('has correct defaults', () => {
-    expect(LIGHTNING_MODEL).toBe('qwen2.5-coder:3b');
+    expect(LIGHTNING_MODEL).toBe('qwen3:1.7b');
     expect(MAX_SEGMENT_LINES).toBe(24);
   });
 
