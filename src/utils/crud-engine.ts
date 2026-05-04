@@ -173,7 +173,7 @@ export class CrudEngine {
     try {
       const response = await axios.post(OLLAMA_URL, {
         model: OLLAMA_MODEL, prompt, stream: false,
-      }, { timeout: 30000 });
+      }, { timeout: 300000 });
       return (response.data?.response ?? '')
         .replace(/^```(?:typescript|ts)?\n?/, '')
         .replace(/\n?```$/, '')
